@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Supria Sans Heavy Italic';
+    src: url('/public/fonts/Supria Sans Heavy Italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Supria Sans Heavy Oblique';
+    src: url('/public/fonts/Supria Sans Heavy Oblique.otf') format('opentype');
+}
+
+html {
+    background-color: #0d1c2b;
+    color: #f5f7f7;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0 0 4px;
+    padding-left: 12px;
+}
