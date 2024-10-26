@@ -61,8 +61,8 @@ function play() {
     <div>
         <div class="header">
             <div class="logo">
-                <span style="font-family: 'Supria Sans Heavy Italic'; margin-right: -1px">coolpixels.</span>
-                <span style="font-family: 'Supria Sans Heavy Oblique'">net</span>
+                <span style="font-family: 'SupriaSansHeavyItalic'; margin-right: -1px">coolpixels.</span>
+                <span style="font-family: 'SupriaSansHeavyOblique'">net</span>
             </div>
         </div>
         <div class="container">

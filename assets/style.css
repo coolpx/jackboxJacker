@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Supria Sans Heavy Italic';
-    src: url('/public/fonts/Supria Sans Heavy Italic.otf') format('opentype');
+    font-family: 'SupriaSansHeavyItalic';
+    src: url('/assets/fonts/SupriaSansHeavyItalic.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'Supria Sans Heavy Oblique';
-    src: url('/public/fonts/Supria Sans Heavy Oblique.otf') format('opentype');
+    font-family: 'SupriaSansHeavyOblique';
+    src: url('/assets/fonts/SupriaSansHeavyOblique.otf') format('opentype');
 }
 
 html {
