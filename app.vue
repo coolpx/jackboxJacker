@@ -216,4 +216,9 @@ input::placeholder {
     font-size: 28px;
     letter-spacing: -1px;
 }
+
+.logo > span {
+    color: #ffffff;
+    font-weight: normal;
+}
 </style>
