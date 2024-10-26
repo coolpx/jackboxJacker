@@ -1,4 +1,71 @@
 <script setup lang="ts">
+const gameNames = {
+    prototype: 'Prototype',
+    'ecast-test-client': 'EcastTestClient',
+    'quiplash2-international': 'Quiplash 2 InterLASHional',
+    'guesspionage-crowdplay': 'Guesspionage Crowdplay',
+    drawful2: 'Drawful 2',
+    drawful2international: 'Drawful 2',
+    'acquisitions-inc': 'Acquisitions, Inc.',
+    bigsurvey: 'The Jackbox Survey Scramble',
+    ydkj2015: 'You Don\'t Know Jack 2015',
+    drawful: 'Drawful',
+    wordspud: 'Word Spud',
+    lieswatter: 'Lie Swatter',
+    fibbage: 'Fibbage',
+    fibbage2: 'Fibbage 2',
+    earwax: 'Earwax',
+    auction: 'Bidiots',
+    bombintern: 'Bomb Corp',
+    quiplash: 'Quiplash',
+    fakinit: 'Fakin\' It',
+    awshirt: 'Tee K.O.',
+    quiplash2: 'Quiplash 2',
+    triviadeath: 'Trivia Murder Party',
+    pollposition: 'Guesspionage',
+    fibbage3: 'Fibbage 3',
+    survivetheinternet: 'Survive the Internet',
+    monstermingle: 'Monster Seeking Monster',
+    bracketeering: 'Bracketeering',
+    overdrawn: 'Civic Doodle',
+    ydkj2018: 'You Don\'t Know Jack: Full Stream',
+    splittheroom: 'Split the Room',
+    rapbattle: 'Mad Verse City',
+    slingshoot: 'Zeeple Dome',
+    patentlystupid: 'Patently Stupid',
+    triviadeath2: 'Trivia Murder Party 2',
+    rolemodels: 'Role Models',
+    jokeboat: 'Joke Boat',
+    ridictionary: 'Dictionarium',
+    pushthebutton: 'Push the Button',
+    'jackbox-talks': 'Talking Points',
+    quiplash3: 'Quiplash 3',
+    everyday: 'The Devils and the Details',
+    worldchamps: 'Champ\'d Up',
+    'blanky-blank': 'Blather \'Round',
+    'apply-yourself': 'Job Job',
+    'drawful-animate': 'Drawful Animate',
+    'the-wheel': 'The Wheel of Enormous Proportions',
+    'survey-bomb': 'The Poll Mine',
+    'murder-detectives': 'Weapons Drawn',
+    'quiplash3-tjsp': 'Quiplash 3',
+    'awshirt-tjsp': 'Tee K.O.',
+    'triviadeath2-tjsp': 'Trivia Murder Party 2',
+    fourbage: 'Fibbage 4',
+    htmf: 'Roomerang',
+    'antique-freak': 'Junktopia',
+    'range-game': 'Nonsensory',
+    lineup: 'Quixort',
+    awshirt2: 'Tee K.O. 2',
+    'nopus-opus': 'Dodo Re Mi',
+    'risky-text': 'FixyText',
+    'time-trivia': 'Timejinx',
+    'us-them': 'Hypnotorious',
+    fakinit2: 'Fakin\' It All Night Long',
+    drawful3: 'Dirty Drawful',
+    captcha: 'Let Me Finish'
+} as { [tag: string]: string };
+
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 const status = ref('By clicking Play, you agree to our Terms of Service');
@@ -45,7 +112,9 @@ async function jack() {
     try {
         const lobby = await findWorkingLobby();
 
-        status.value = `Jacked '${lobby.appTag}'`;
+        const gameName = gameNames[lobby.appTag] || 'Unknown';
+        const useAn = ['A', 'E', 'I', 'O', 'U'].includes(gameName[0].toUpperCase());
+        status.value = `Jacked ${useAn ? 'an' : 'a'} ${gameName} lobby!`;
         done.value = true;
     } catch (error) {
         status.value = 'Error (you may be IP-banned)';
